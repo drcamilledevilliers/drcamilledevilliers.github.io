@@ -1,12 +1,12 @@
 :root{
-    --paper: #FFFFFF;
-    --paper-line: #E5E7EB;
-    --ink: #030712;
-    --ink-soft: #6B7280;
+    --paper: #0B0F19;
+    --paper-line: #232B3D;
+    --ink: #F3F4F6;
+    --ink-soft: #9CA3AF;
     --accent: #9D3DFF;
     --accent-2: #FF1FAE;
     --grad: linear-gradient(90deg, var(--accent), var(--accent-2));
-    --card: #F9FAFB;
+    --card: #131926;
     --max-w: 960px;
   }
   *{box-sizing:border-box;}
@@ -26,7 +26,7 @@
 
   nav.topnav{
     position:sticky; top:0; z-index:10;
-    background:rgba(255,255,255,0.92);
+    background:rgba(11,15,25,0.85);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--paper-line);
   }
@@ -119,7 +119,7 @@
   @media (max-width:600px){ .entry{grid-template-columns:1fr; gap:6px;} }
 
   /* education */
-  .edu-card{ background:var(--card); border:1px solid var(--paper-line); border-radius:14px; padding:20px 22px; margin-bottom:14px; box-shadow:0 4px 14px rgba(3,7,18,0.04); }
+  .edu-card{ background:var(--card); border:1px solid var(--paper-line); border-radius:14px; padding:20px 22px; margin-bottom:14px; box-shadow:0 4px 14px rgba(0,0,0,0.35); }
   .edu-card:last-child{margin-bottom:0;}
   .edu-card h3{ font-family:'Poppins', sans-serif; font-weight:600; font-size:1.08rem; margin:0 0 3px; }
   .edu-card .when{ font-family:'Poppins', sans-serif; font-weight:600; font-size:0.76rem; color:var(--ink-soft); }
@@ -135,7 +135,7 @@
     background:var(--card); border:1px solid var(--paper-line); border-radius:20px; color:var(--ink);
   }
 
-  .why-card{ background:var(--card); border-left:3px solid var(--accent-2); border-radius:0 14px 14px 0; padding:24px 26px; box-shadow:0 4px 14px rgba(3,7,18,0.04); }
+  .why-card{ background:var(--card); border-left:3px solid var(--accent-2); border-radius:0 14px 14px 0; padding:24px 26px; box-shadow:0 4px 14px rgba(0,0,0,0.35); }
   .why-card p{ margin:0; font-size:1.02rem; }
 
   footer{
@@ -152,10 +152,10 @@
 .post-card{
   display:block; text-decoration:none; color:inherit;
   background:var(--card); border:1px solid var(--paper-line); border-radius:14px;
-  padding:24px 26px; margin-bottom:16px; box-shadow:0 4px 14px rgba(3,7,18,0.04);
+  padding:24px 26px; margin-bottom:16px; box-shadow:0 4px 14px rgba(0,0,0,0.35);
   transition:border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-.post-card:hover{ border-color:var(--accent-2); transform:translateY(-2px); box-shadow:0 10px 24px rgba(3,7,18,0.08); }
+.post-card:hover{ border-color:var(--accent-2); transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,0.5); }
 .post-meta{ display:flex; gap:12px; align-items:center; margin-bottom:10px; }
 .post-tag{
   font-family:'Poppins', sans-serif; font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em;
@@ -177,14 +177,17 @@
 /* image placeholders — swap the inner <img> in for the placeholder div when real photos are ready */
 .img-placeholder{
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
-  background:repeating-linear-gradient(135deg, var(--card), var(--card) 10px, #F3F4F6 10px, #F3F4F6 20px);
-  border:1px dashed #D1D5DB; border-radius:8px; color:var(--ink-soft);
+  background:repeating-linear-gradient(135deg, var(--card), var(--card) 10px, #1A2233 10px, #1A2233 20px);
+  border:1px dashed #374151; border-radius:8px; color:var(--ink-soft);
   font-family:'Poppins', sans-serif; font-weight:600; font-size:0.72rem; text-align:center; text-transform:uppercase; letter-spacing:0.06em;
   flex-shrink:0;
 }
 .img-placeholder svg{ width:26px; height:26px; opacity:0.55; }
 .img-placeholder--portrait{ width:220px; height:220px; border-radius:50%; }
+.headshot-img{ width:220px; height:220px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+@media (max-width:680px){ .headshot-img{ width:150px; height:150px; margin:0 auto; } }
 .img-placeholder--cover{ width:100%; aspect-ratio:16/7; border-radius:8px; margin:28px 0 0; }
+.cover-img{ width:100%; aspect-ratio:16/7; border-radius:8px; margin:28px 0 0; object-fit:cover; }
 .img-placeholder--thumb{ width:104px; height:104px; border-radius:6px; }
 
 .hero-flex{ display:flex; align-items:center; gap:44px; flex-wrap:wrap-reverse; }
